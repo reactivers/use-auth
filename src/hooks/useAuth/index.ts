@@ -1,11 +1,11 @@
-import { useCallback } from 'react';
+import { Dispatch, SetStateAction, useCallback } from 'react';
 import { useAuthContext, UserInfo } from './context';
 
 interface IUseAuth {
     setToken: (token: string) => void,
     login: (data: any) => void,
     logout: () => void,
-    setUser: (user: UserInfo) => void,
+    setUser: Dispatch<SetStateAction<UserInfo>>,
     user: UserInfo,
     isLoggedIn: boolean;
     token: string

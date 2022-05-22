@@ -2,9 +2,9 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var react = require('react');
 var jsxRuntime = require('react/jsx-runtime');
 var useLocalStorage = require('@reactivers/use-local-storage');
+var react = require('react');
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -93,7 +93,7 @@ var AuthProvider = function (_a) {
             setToken: setToken,
             onLogin: onLogin,
             onLogout: onLogout
-        } }, { children: children }), void 0));
+        } }, { children: children })));
 };
 var useAuthContext = function () {
     var context = react.useContext(AuthContext);

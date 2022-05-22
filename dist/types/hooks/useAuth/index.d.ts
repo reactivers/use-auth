@@ -1,9 +1,10 @@
+import { Dispatch, SetStateAction } from 'react';
 import { UserInfo } from './context';
 interface IUseAuth {
     setToken: (token: string) => void;
     login: (data: any) => void;
     logout: () => void;
-    setUser: (user: UserInfo) => void;
+    setUser: Dispatch<SetStateAction<UserInfo>>;
     user: UserInfo;
     isLoggedIn: boolean;
     token: string;

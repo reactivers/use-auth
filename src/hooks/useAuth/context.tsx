@@ -1,10 +1,10 @@
-import { createContext, FC, useCallback, useContext, useEffect, useState } from "react";
 import { useLocalStorage } from "@reactivers/use-local-storage";
+import { createContext, Dispatch, FC, PropsWithChildren, SetStateAction, useCallback, useContext, useEffect, useState } from "react";
 
 interface AuthContextProps {
     localStorageTokenKeyName: string;
     user?: UserInfo;
-    setUser: (info: UserInfo) => void;
+    setUser: Dispatch<SetStateAction<UserInfo>>;
     setToken: (token: string) => void;
     onLogin: (info: UserInfo) => void;
     onLogout: () => void;
@@ -28,7 +28,7 @@ export interface UserInfo {
 
 const AuthContext = createContext({} as AuthContextProps);
 
-const AuthProvider: FC<AuthProviderProps> = ({
+const AuthProvider: FC<PropsWithChildren<AuthProviderProps>> = ({
     authTokenKeyName = 'token',
     localStorageTokenKeyName = "token",
     user: _user,

@@ -1,8 +1,8 @@
-import { FC } from "react";
+import { Dispatch, FC, PropsWithChildren, SetStateAction } from "react";
 interface AuthContextProps {
     localStorageTokenKeyName: string;
     user?: UserInfo;
-    setUser: (info: UserInfo) => void;
+    setUser: Dispatch<SetStateAction<UserInfo>>;
     setToken: (token: string) => void;
     onLogin: (info: UserInfo) => void;
     onLogout: () => void;
@@ -21,6 +21,6 @@ export interface UserInfo {
     isLoggedIn: boolean;
     userInfo?: any;
 }
-declare const AuthProvider: FC<AuthProviderProps>;
+declare const AuthProvider: FC<PropsWithChildren<AuthProviderProps>>;
 export declare const useAuthContext: () => AuthContextProps;
 export default AuthProvider;
