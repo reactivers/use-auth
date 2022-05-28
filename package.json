@@ -27,7 +27,9 @@
   "scripts": {
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
-    "dev": "npm-run-all --parallel build-watch"
+    "dev": "npm-run-all --parallel build-watch",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@types/node": "17.0.33",
