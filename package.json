@@ -1,7 +1,7 @@
 {
   "name": "@reactivers/use-auth",
   "description": "Authorization/Authentication manager in React with hook and provider",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "hooks",
     "react",
