@@ -1,7 +1,7 @@
 {
   "name": "@reactivers/use-auth",
   "description": "Authorization/Authentication manager in React with hook and provider",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keywords": [
     "hooks",
     "react",
@@ -50,7 +50,7 @@
   },
   "peerDependencies": {
     "react": "^18.1.0 || ^17.0.0 || ^16.8.0",
-    "@reactivers/use-local-storage": "^1.0.1"
+    "@reactivers/use-local-storage": "^1.0.2"
   },
   "eslintConfig": {
     "extends": [
