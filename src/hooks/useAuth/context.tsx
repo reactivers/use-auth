@@ -38,8 +38,11 @@ const AuthProvider: FC<PropsWithChildren<AuthProviderProps>> = ({
     children
 }) => {
 
-    const [user, setUser] = useState<UserInfo>(_user);
     const { getItem, removeItem, setItem } = useLocalStorage(localStorageTokenKeyName)
+    const [user, setUser] = useState<UserInfo>({
+        ..._user,
+        token: getItem()
+    });
 
     const onLogin = useCallback((info) => {
         const oldToken = getItem();
